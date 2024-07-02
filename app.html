@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #000000;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='842' height='101' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23222' stroke-width='5.9' stroke-opacity='0.91'%3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");
+      }
+
+      .hero {
+        color: aliceblue;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0px;
+        margin: 0px;
+        /* text-align: center; */
+      }
+      .sathi {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      #title {
+        font-size: xxx-large;
+        letter-spacing: 6px;
+        margin: 10px;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: 0.15em solid orange; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: 0.15em; /* Adjust as needed */
+        -webkit-animation-delay: 2s;
+        animation-delay: 3s;
+        animation: typing 0s steps(40, end) 2s,
+          blink-caret 0.75s step-end infinite;
+      }
+      /* The typing effect */
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+
+      /* The typewriter cursor effect */
+      @keyframes blink-caret {
+        from,
+        to {
+          border-color: transparent;
+        }
+        50% {
+          border-color: orange;
+        }
+      }
+      .sathi a {
+        font-size: xxx-large;
+        letter-spacing: 6px;
+      }
+      .ibm p {
+        font-size: xx-large;
+        letter-spacing: 1px;
+      }
+      .ibm a {
+        font-size: xx-large;
+      }
+      .intro {
+        text-align: center;
+        font-size: x-large;
+        letter-spacing: 1px;
+        width: 60%;
+      }
+      @media (max-width: 600px) {
+        .hero {
+        }
+        #title {
+          font-size: xx-large;
+          letter-spacing: 2px;
+          margin: 10px;
+        }
+        .sathi a {
+          font-size: xx-large;
+          letter-spacing: 2px;
+        }
+
+        .ibm p {
+          font-size: x-large;
+          letter-spacing: 1px;
+        }
+        .ibm a {
+          font-size: x-large;
+        }
+        .intro {
+          text-align: center;
+          font-size: medium;
+          letter-spacing: 1px;
+          width: 80%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      window.watsonAssistantChatOptions = {
+        integrationID: "cad65f3b-2d27-471c-85cf-d3d43d0af5b2", // The ID of this integration.
+        region: "us-south", // The region your integration is hosted in.
+        serviceInstanceID: "a956d75f-08c2-4442-aaac-68607b41884a", // The ID of your service instance.
+        onLoad: async (instance) => {
+          await instance.render();
+        },
+      };
+      setTimeout(function () {
+        const t = document.createElement("script");
+        t.src =
+          "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" +
+          (window.watsonAssistantChatOptions.clientVersion || "latest") +
+          "/WatsonAssistantChatEntry.js";
+        document.head.appendChild(t);
+      });
+    </script>
+    <div class="img"></div>
+    <div class="hero">
+      <div class="sathi">
+        <p id="title">
+          Introducing <a style="color: rgb(241, 143, 38)"> Sarthi</a>
+        </p>
+        <div class="ibm">
+          <p>
+            An
+            <a style="color: rgb(109, 148, 238)">IBM</a>
+            Powered Chat-Boat
+          </p>
+        </div>
+      </div>
+      <div class="intro">
+        <p>
+          with <a style="color: rgb(241, 143, 38)">sarthi</a> we are here to
+          help you with your studies by providing personalized learning paths,
+          resources, explanations of important topics.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
